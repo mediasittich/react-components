@@ -1,0 +1,30 @@
+.close-button {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.close-button:focus {
+    outline: none;
+}
+
+.close-button__icon {
+    width: 30px;
+    background: white;
+    color: #2196F3;
+    font-size: 1.5rem;
+}
+
+.close-button:hover .close-button__icon,
+.close-button:active .close-button__icon {
+    color: #fa923f;
+}
