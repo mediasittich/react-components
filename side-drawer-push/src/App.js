@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import ContentWrapper from './components/ContentWrapper/ContentWrapper';
 import Navbar from './components/Navbar/Navbar';
+import Backdrop from './components/Backdrop/Backdrop';
 
 class App extends Component {
   state = {
@@ -15,15 +16,27 @@ class App extends Component {
     });
   };
 
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  }
+
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
+
     return (
       <div>
         <SideDrawer
           show={this.state.sideDrawerOpen}
         />
+        
         <ContentWrapper
           show={this.state.sideDrawerOpen}
         >
+        {backdrop}
         <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
           <main style={{ marginTop: '64px'}}>
             <p>This is the page content!
