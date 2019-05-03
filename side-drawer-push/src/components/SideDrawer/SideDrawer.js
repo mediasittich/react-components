@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import DrawerCloseButton from './DrawerCloseButton';
-
 import './SideDrawer.css';
 
 const sideDrawer = props => {
@@ -13,7 +11,6 @@ const sideDrawer = props => {
 
     return (
         <nav className={drawerClasses.join(' ')}>
-            {/* <DrawerCloseButton close={props.drawerCloseClickHandler} /> */}
             <ul>
                 <li><a href="/">Products</a></li>
                 <li><a href="/">Users</a></li>

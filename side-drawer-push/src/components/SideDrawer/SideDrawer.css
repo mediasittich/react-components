@@ -2,19 +2,21 @@
     height: 100%;
     background: white;
     box-shadow: none;
-    /* position: fixed;
+    position: fixed;
     top: 0;
-    left: 0; */
-    width: 70%;
-    max-width: 400px;
-    z-index: 200;
-    /* transform: translateX(-100%);
-    transition: all 0.3s ease-out; */
+    bottom: 0;
+    left: -14em;
+    width: 14em;
+    visibility: hidden;
+    overflow-y: auto;
+    transform: translateX(0);
+    transition: all 0.3s ease-out;
 }
 
 .side-drawer.open {
-    box-shadow: 1px 0 7px rgba(0, 0, 0, .5);
-    /* transform: translateX(0); */
+    z-index: 10;
+    visibility: visible;
+    transform: translateX(14rem);
 }
 
 .side-drawer ul {
